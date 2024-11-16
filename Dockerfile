@@ -5,9 +5,13 @@ FROM python:3.12-slim-bullseye
 RUN apt-get update && apt-get install -y \
     build-essential \
     libmariadb-dev \
+    libmariadb-client-lgpl-dev \
     libssl-dev \
     python3-dev \
     && rm -rf /var/lib/apt/lists/*
+
+# Atualiza o pip
+RUN pip install --upgrade pip
 
 # Define o diretório de trabalho dentro do container
 WORKDIR /app

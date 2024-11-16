@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../static/menu.js" defer></script> <!-- Separação do JavaScript para o menu -->
+    <script src="../static/function.js" defer></script> <!-- Separação do JavaScript para funções -->
+    <title>ORÇAMENTO</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+</head>
+
+<header class="header">
+    <!-- Menu Mobile -->
+    <div id="btn-menu" class="menu-icon">
+        <i class="bi bi-list"></i> Menu
+    </div>
+    <div id="overlay-menu" class="overlay"></div>
+    <nav id="menu-mobile" class="menu-mobile-content">
+        <ul>
+            <li><button id="increaseFontBtn" class="menu-btn"><i class="fas fa-text-height"></i></button></li>
+            <!-- Ícone de Aumentar Fonte -->
+            <li><button id="darkModeBtn" class="menu-btn"><i class="fas fa-moon"></i></button></li>
+            <!-- Ícone de Modo Escuro -->
+            <li><button id="btn-fechar-menu" class="fechar-menu"><i class="fas fa-times"></i></button></li>
+            <!-- Ícone de Fechar -->
+        </ul>
+    </nav>
+
+
+    <div>
+        <h1>SISTEMA DE ORÇAMENTO WEB</h1>
+        <h2>DETALHAMENTO</h2>
+    </div>
+</header>
+
+<body>
+    <!-- Formulário de orçamento -->
+    <form action="/salvar" method="POST">
+        <div class="form-group">
+            <label for="id_cliente">Cliente: </label>
+            <input type="text" name="cliente" placeholder="Cliente" id="id_cliente" autocomplete="off">
+        </div>
+
+        <div class="form-group">
+            <label for="id_endereco">Endereço: </label>
+            <input type="text" name="endereco" placeholder="Endereço" id="id_endereco" autocomplete="off">
+        </div>
+
+        <div class="form-group">
+            <label for="id_telefone">Telefone: </label>
+            <input type="tel" name="telefone" placeholder="Telefone" id="id_telefone" autocomplete="off">
+        </div>
+
+        <div class="form-group">
+            <label for="id_descricao">Descrição: </label>
+            <input type="text" name="descricao" placeholder="Descrição" id="id_descricao" autocomplete="off">
+        </div>
+
+        <div class="form-group">
+            <label for="id_execucao">Horas Estimadas de Execução: </label>
+            <input type="number" step="0.01" name="execucao" placeholder="Horas Estimada de Execução" id="id_execucao"
+                autocomplete="off">
+        </div>
+
+        <div class="form-group">
+            <label for="id_hora">Valor da Hora:</label>
+            <input type="number" step="0.01" name="hora" placeholder="Valor da Hora" id="id_hora" autocomplete="off">
+        </div>
+
+        <div class="form-group">
+            <label for="id_material">Valor do Material Utilizado: </label>
+            <input type="number" step="0.01" name="material" placeholder="Valor do Material Utilizado" id="id_material"
+                autocomplete="off">
+        </div>
+
+        <div class="form-group">
+            <label for="id_entrega">Prazo Estimado de Entrega: </label>
+            <input type="text" name="entrega" placeholder="Data" id="id_entrega" autocomplete="off">
+        </div>
+
+        <div class="form-actions">
+            <input class="btn_salvar" type="submit" name="salvar" value="Salvar">
+            <input class="btn_sair" type="submit" formaction="/logout" name="sair" value="Sair">
+        </div>
+
+        <div class="form-actions">
+            <button class="btn_enviar" type="submit" formaction="/enviar_orcamento" formmethod="GET" type="button" onclick="enviar_orcamento()" formnovalidate>
+                <i class="bi bi-whatsapp whatsapp_img"></i> <!-- Ícone do WhatsApp dentro do botão -->
+            </button>
+        </div>
+
+
+    </form>
+</body>
+
+</html>

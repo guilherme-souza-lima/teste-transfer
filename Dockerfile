@@ -3,7 +3,10 @@ FROM python:3.12.3-slim
 
 # Instalar dependências do sistema, incluindo o cliente MariaDB e as bibliotecas de desenvolvimento
 RUN apt-get update && apt-get install -y \
-    mariadb-client libmariadb-dev
+    libmariadb-dev \
+    gcc \
+    python3-dev
+
 
 # Criar diretório de trabalho
 WORKDIR /app

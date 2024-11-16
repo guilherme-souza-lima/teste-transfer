@@ -7,7 +7,7 @@ WORKDIR /app
 # Copia os arquivos de requisitos e o código para o diretório de trabalho
 COPY requirements.txt /app/
 COPY templates /app/
-COPY rstatic /app/
+COPY static /app/
 COPY orcamento /app/
 COPY icone /app/
 COPY meu_site_novo.py /app/

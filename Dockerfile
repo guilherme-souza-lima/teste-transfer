@@ -9,7 +9,7 @@ COPY requirements.txt /app/
 COPY templates /app/
 COPY static /app/
 COPY orcamento /app/
-COPY icone /app/
+COPY Icone /app/
 COPY meu_site_novo.py /app/
 
 # Instala as dependências do projeto

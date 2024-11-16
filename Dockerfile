@@ -15,10 +15,10 @@ WORKDIR /app
 
 # Copiar os arquivos necessários para o contêiner
 COPY requirements.txt /app/
-COPY templates /app/
-COPY static /app/
-COPY orcamento /app/
-COPY Icone /app/
+COPY templates /app/templates
+COPY static /app/static
+COPY orcamento /app/orcamento
+COPY Icone /app/Icone
 COPY meu_site_novo.py /app/
 
 # Instalar as dependências do Python
